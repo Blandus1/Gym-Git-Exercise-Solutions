@@ -662,3 +662,50 @@ Fast-forward
 HP@DESKTOP-3TFO1V0 MINGW64 ~/OneDrive/Desktop/Git (ft/service-redesign)
 $ git diff
 ***
+
+## Bundle3
+### Exercise2
+
+***
+$ git switch -c "ft/home-page-redesign"
+Switched to a new branch 'ft/home-page-redesign'
+
+Git (ft/home-page-redesign)                   Git (ft/home-page-redesi
+$
+
+HP@DESKTOP-3TFO1V0 MINGW64 ~/OneDrive/Desktop/Git (ft/home-page-redesign)                   Git (ft/home-page-redesi
+$ git rebase main
+error: cannot rebase: Your index contains uncommitted changes.                              mmitted changes.
+error: Please commit or stash them.
+
+HP@DESKTOP-3TFO1V0 MINGW64 ~/OneDrive/Desktop/Git (ft/home-page-redesiGit (ft/home-page-redesign)
+$ git checkout main
+D       project/index.html
+D       project/script.js
+D       project/style.css
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@DESKTOP-3TFO1V0 MINGW64 ~/OneDrive/Desktop/Git (main)
+$ git rebase ft/home-page-redesign 
+error: cannot rebase: Your index contains uncommitted changes.
+error: Please commit or stash them.
+
+HP@DESKTOP-3TFO1V0 MINGW64 ~/OneDrive/Desktop/Git (main)
+$ git checkout ft/home-page-redesign 
+D       project/index.html
+D       project/script.js
+D       project/style.css
+Switched to branch 'ft/home-page-redesign'    
+
+HP@DESKTOP-3TFO1V0 MINGW64 ~/OneDrive/Desktop/Git (ft/home-page-redesign)
+$ git stash
+Saved working directory and index state WIP on ft/home-page-redesign: 4a79d82 adding faq.page
+
+HP@DESKTOP-3TFO1V0 MINGW64 ~/OneDrive/Desktop/Git (ft/home-page-redesign)
+$ git rebase main
+Current branch ft/home-page-redesign is up to 
+date.
+
+HP@DESKTOP-3TFO1V0 MINGW64 ~/OneDrive/Desktop/Git (ft/home-page-redesign)
+***
